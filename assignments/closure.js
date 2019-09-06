@@ -6,7 +6,7 @@
 const trouble = () => {
   //trouble1(); // 1
   //trouble1(); // 2
-  let troubles = 0;
+  let troubles = 5;
   return function() {
     troubles = troubles + 1;
     return troubles;
