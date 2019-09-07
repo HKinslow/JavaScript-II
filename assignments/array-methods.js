@@ -98,8 +98,27 @@ console.log(ticketPriceTotal);
 // problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3
 // unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1: Use .filter()
+// The director wants to know who the top donators are. Using .filter() return all the runners who donated more than 200 dollars
+let topDonators = runners.filter((runner) =>{
+  if (runner.donation > "200") {
+    return true;
+  } else {
+    return false;
+  }
+})
+console.log(topDonators);
 
-// Problem 2
+// Problem 2: Use .reduce()
+// The director wants to know the average of the donations. Using .reduce() find out the average donation between all of the runners.
+let ticketAverageTotal = runners.reduce((acc, value) => {
+  return acc + value.donation;
+}, 0);
+console.log(ticketAverageTotal/runners.length);
 
-// Problem 3
+// Problem 3: Use .map()
+// The director needs to have all of the runners email in uppercase for the paperwork.
+let emailUpperCase = runners.map((runner) => {
+  return runner.email.toUpperCase();
+});
+console.log(emailUpperCase);
